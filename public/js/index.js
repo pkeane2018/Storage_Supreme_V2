@@ -1,13 +1,21 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
     $(document).on("submit", newRequest);
 
-function newRequest() {
-    event.preventDefault();
+    function newRequest() {
 
-    var request = 
+        event.preventDefault();
 
+        var request = {
 
-}
+            projectName = $("#project-name").val().trim(),
+            requestorName = $("#requestor-name").val().trim(),
+            materialDesc = $("#material-description").val().trim(),
+            quantity = $("#quantity").val().trim(),
+            needByDate = $("#need-by-date").val().trim()
+        };
+
+        $.post("api/requests", request);
+    }
 
 });
