@@ -29,6 +29,11 @@ module.exports = function(app) {
     // Info needs to be added here to display the databse
     res.render("procurementall");
   });
+
+  app.get("/procurement/update", function(req, res) {
+    // Info needs to be added here to display the databse
+    res.render("updaterequest");
+  });
   // app.get("/", function(req, res) {
   //   db.Example.findAll({}).then(function(dbExamples) {
   //     res.render("index", {
@@ -38,14 +43,14 @@ module.exports = function(app) {
   //   });
   // });
 
-  // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("example", {
-        example: dbExample
-      });
-    });
-  });
+  // // Load example page and pass in an example by id
+  // app.get("/example/:id", function(req, res) {
+  //   db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
+  //     res.render("example", {
+  //       example: dbExample
+  //     });
+  //   });
+  // });
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
