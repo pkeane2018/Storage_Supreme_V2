@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "tito6543",
-    "database": "exampledb",
+    "database": "angelsdb",
     "host": "localhost",
     "dialect": "mysql"
   },
