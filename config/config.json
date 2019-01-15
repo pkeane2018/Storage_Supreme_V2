@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "sqlpassword",
-    "database": "exampledb",
+    "password": "",
+    "database": "angelsdb",
     "host": "localhost",
     "dialect": "mysql"
   },
