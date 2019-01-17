@@ -19,6 +19,9 @@ module.exports = function(app) {
   });
 
   app.get("/procurement", function(req, res) {
+
+ 
+
     db.purchase_orders.findAll({}).then(function() {
       console.log(res);
       res.render("procurement");
@@ -34,11 +37,11 @@ module.exports = function(app) {
       console.log(req);
       res.render("review");
     });
+
   });
-  // app.get("/procurement/unassigned", function (req, res) {
-  //   // Info needs to be added here to display the database
-  //   res.render("procunassigned");
-  // });
+  
+
+  
 
   // app.get("/procurement/assigned", function (req, res) {
   //   // Info needs to be added here to display the databse
@@ -57,6 +60,7 @@ module.exports = function(app) {
   //     });
   //   });
   // });
+
 
 
   // app.get("/", function(req, res) {
