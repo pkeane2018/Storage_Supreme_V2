@@ -1,7 +1,11 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
+    "password": "Rocket13&",
+=======
     "password": "tito6543",
+>>>>>>> master
     "database": "angelsdb",
     "host": "localhost",
     "dialect": "mysql"
