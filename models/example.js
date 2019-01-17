@@ -1,11 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
   var PurchaseOrders = sequelize.define("purchase_orders", {
     projectName: DataTypes.STRING,
-<<<<<<< HEAD
     requestorName: DataTypes.STRING,
-=======
-    requestorname: DataTypes.STRING,
->>>>>>> master
     materialDescription: DataTypes.STRING,
     quantity: DataTypes.INTEGER,
     needByDate: DataTypes.DATEONLY,
@@ -21,8 +17,4 @@ module.exports = function(sequelize, DataTypes) {
     updatedAt: DataTypes.STRING
   });
   return PurchaseOrders;
-<<<<<<< HEAD
 };
-=======
-}
->>>>>>> master
