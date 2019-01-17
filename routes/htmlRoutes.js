@@ -28,7 +28,7 @@ module.exports = function(app) {
   app.get("/review", function(req, res) {
     db.purchase_orders.findAll({
       where: {
-        projectName: req.params.projectName;
+        projectName: req.params.projectName
       }
     }).then(function () {
       console.log(req);
