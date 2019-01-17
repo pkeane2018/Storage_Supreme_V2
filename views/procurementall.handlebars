@@ -59,4 +59,22 @@
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+<script>
+
+$(document).ready(function() {
+
+    $(".submit").click(function(event){
+
+      event.preventDefault();
+
+      var stuff = ("#form1").elements["assigned-buyer"].val()
+      {{!-- var things = stuff.elements["assigned-buyer"].val(); --}}
+      console.log($(this).parent().attr("id"));
+      console.log(stuff);
+    })
+
+});
+
+</script>
+
 <script src="../../public/js/all.js"></script>
