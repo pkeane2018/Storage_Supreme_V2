@@ -40,8 +40,6 @@ module.exports = function(app) {
 
     db.purchase_orders.findAll().then(function(results){
 
-      console.log(results);
-
     res.render("procurementall", {
       orders: results
     });
