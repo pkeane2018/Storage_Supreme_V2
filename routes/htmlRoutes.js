@@ -1,5 +1,13 @@
 var db = require("../models");
 
+var express = require("express");
+var exphbs = require("express-handlebars");
+
+var app = express();
+
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
@@ -22,13 +30,21 @@ module.exports = function(app) {
 
   app.get("/procurement/assigned", function(req, res) {
     // Info needs to be added here to display the databse
-    res.render("procassigned");
-  });
+
+      res.render("procassigned");
+
+    });
 
   app.get("/procurement/all", function(req, res) {
     // Info needs to be added here to display the databse
-    res.render("procurementall");
+
+    db.purchase_orders.findAll().then(function(results){
+
+    res.render("procurementall", {
+      orders: results
+    });
   });
+});
 
   app.get("/procurement/update", function(req, res) {
     // Info needs to be added here to display the databse
