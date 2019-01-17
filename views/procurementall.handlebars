@@ -17,7 +17,6 @@
         <br />
         <style>
           th {
-
             width: 176px;
           }
         </style>
@@ -52,29 +51,33 @@
 </form>
 {{/each}}
 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+
+  $(document).ready(function() {
+
+  $(".submit").click(function(event){
+
+    event.preventDefault();
+
+    var update = {
+
+      buyer: $(this).parent()[0].elements[1].value,
+      material: $(this).parent()[0].elements[2].value,
+      quantity: $(this).parent()[0].elements[3].value,
+
+    };
+
+  console.log(update);
+
+  });
+
+});
+</script>
+
       </div>
     </div>
   </div>
 </div>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<script>
-
-$(document).ready(function() {
-
-    $(".submit").click(function(event){
-
-      event.preventDefault();
-
-      var stuff = ("#form1").elements["assigned-buyer"].val()
-      {{!-- var things = stuff.elements["assigned-buyer"].val(); --}}
-      console.log($(this).parent().attr("id"));
-      console.log(stuff);
-    })
-
-});
-
-</script>
-
-<script src="../../public/js/all.js"></script>
