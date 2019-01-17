@@ -19,40 +19,50 @@ module.exports = function(app) {
   });
 
   app.get("/procurement", function(req, res) {
-    db.purchase_orders.findAll().then(function(results) {
-      res.render("procurementall", {
-        orders: results
-      });
+
+ 
+
+    db.purchase_orders.findAll({}).then(function() {
+      console.log(res);
+      res.render("procurement");
     });
-    // res.render("procurementall");
   });
 
   app.get("/review", function(req, res) {
-    // Info needs to be added here to display the database
-    res.render("review");
+    db.purchase_orders.findAll({
+      where: {
+        projectName: req.params.projectName
+      }
+    }).then(function () {
+      console.log(req);
+      res.render("review");
+    });
+
   });
+  
 
-  // app.get("/procurement/assigned", function(req, res) {
+  
+
+  // app.get("/procurement/assigned", function (req, res) {
   //   // Info needs to be added here to display the databse
 
-  //     res.render("procassigned");
+  //   res.render("procassigned");
 
-  //   });
+  // });
 
-  // app.get("/procurement/all", function(req, res) {
+  // app.get("/procurement/all", function (req, res) {
   //   // Info needs to be added here to display the databse
 
-  //   db.purchase_orders.findAll().then(function(results) {
+  //   db.purchase_orders.findAll().then(function (results) {
+
   //     res.render("procurementall", {
   //       orders: results
   //     });
   //   });
   // });
 
-  // app.get("/procurement/update", function(req, res) {
-  //   // Info needs to be added here to display the databse
-  //   res.render("updaterequest");
-  // });
+
+
   // app.get("/", function(req, res) {
   //   db.Example.findAll({}).then(function(dbExamples) {
   //     res.render("index", {
@@ -72,7 +82,7 @@ module.exports = function(app) {
   // });
 
   // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
+  app.get("*", function (req, res) {
     res.render("404");
   });
 };

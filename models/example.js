@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
   var PurchaseOrders = sequelize.define("purchase_orders", {
     projectName: DataTypes.STRING,
-    requestorname: DataTypes.STRING,
+    requestorName: DataTypes.STRING,
     materialDescription: DataTypes.STRING,
     quantity: DataTypes.INTEGER,
     needByDate: DataTypes.DATEONLY,
@@ -17,4 +17,4 @@ module.exports = function(sequelize, DataTypes) {
     updatedAt: DataTypes.STRING
   });
   return PurchaseOrders;
-}
+};
