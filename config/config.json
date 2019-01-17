@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "",
+    "password": "Rocket13&",
     "database": "angelsdb",
     "host": "localhost",
     "dialect": "mysql"
