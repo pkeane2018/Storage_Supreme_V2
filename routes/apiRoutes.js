@@ -26,7 +26,7 @@ module.exports = function(app) {
       {
       buyer: req.body.buyer,
       materialDescription: req.body.material,
-      quantity: req.body.quanity}, 
+      quantity: req.body.quantity}, 
       {
       where: {
         id : req.body.id}}
