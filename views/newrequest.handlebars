@@ -45,7 +45,6 @@ $(document).ready(function () {
       event.preventDefault();
 
         var request = {
-
             projectName : $("#project-name").val().trim(),
             requestorName : $("#requestor-name").val().trim(),
             materialDesc : $("#material").val().trim(),
@@ -56,6 +55,8 @@ $(document).ready(function () {
         console.log(request);
 
         $.post("api/requests", request);
+
+        $(".form-control").val("");
     });
 
 })

@@ -12,9 +12,7 @@ module.exports = function(sequelize, DataTypes) {
     buyer: DataTypes.STRING,
     status: DataTypes.STRING,
     deliveryStatus: DataTypes.STRING,
-    deliveryDateDelta: DataTypes.INTEGER,
-    createdAt: DataTypes.STRING,
-    updatedAt: DataTypes.STRING
+    deliveryDateDelta: DataTypes.INTEGER
   });
   return PurchaseOrders;
 }

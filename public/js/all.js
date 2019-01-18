@@ -18,7 +18,7 @@ $(document).ready(function() {
 
   $.ajax({
     method: "PUT",
-    url: "/api/procurement/all",
+    url: "/api/update",
     data: update
   });
 

@@ -3,7 +3,7 @@ var express = require("express");
 var exphbs = require("express-handlebars");
 
 var db = require("./models");
-var path = require("path");
+// var path = require("path");
 
 var app = express();
 var PORT = process.env.PORT || 3000;
@@ -11,7 +11,7 @@ var PORT = process.env.PORT || 3000;
 // Middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "/public")));
+app.use(express.static("/public"));
 
 // Handlebars
 app.engine(
