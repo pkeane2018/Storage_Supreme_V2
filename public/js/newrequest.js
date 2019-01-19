@@ -9,7 +9,7 @@ $(document).ready(function () {
         var request = {
 
             projectName : $("#project-name").val().trim(),
-            requestorname : $("#requestor-name").val().trim(),
+            requestorName : $("#requestor-name").val().trim(),
             materialDescription : $("#material").val().trim(),
             quantity : $("#quantity").val().trim(),
             needByDate : $("#need-by-date").val().trim()
