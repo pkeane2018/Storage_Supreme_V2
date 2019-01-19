@@ -1,3 +1,95 @@
+
+<div id="home">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Construction, Inc.</h1>
+        <h2>Purchase Request System</h2>
+        <h2>Procurement Portal</h2>
+        <br />
+        <button type="button" class="btn btn-secondary">Home</button>
+        <br />
+        <br />
+        <button type="button" class="btn btn-secondary">View All Open Requests</button>
+        <button type="button" class="btn btn-secondary">View Unassigned New Requests</button>
+        <button type="button" class="btn btn-secondary">View Assigned New Requests Pending Action</button>
+        <button type="button" class="btn btn-secondary">View All Requests</button>
+        <br />
+        <br />
+        <style>
+          th {
+            width: 176px;
+          }
+        </style>
+        {{!-- Below needs to be updated with the updated model --}}
+        <h3>All Requests:</h3>
+        {{!-- <ul id="open-requests-list" class="list-group"> --}}
+          {{!-- {{#each orders}} --}}
+          {{!-- <li data-id="{{this.id}}" class="list-group-item">
+            <a href="example/{{this.id}}">{{this.text}}</a>
+            <button class="btn btn-danger float-right delete">ｘ</button>
+          </li> --}}
+          {{!-- <li> --}}
+            {{!-- {{buyer}} --}}
+          {{!-- </li> --}}
+          {{!-- {{/each}} --}}
+        {{!-- </ul> --}}
+<table>
+  <tr> 
+    <th>Request Number</th> 
+    <th >Assigned Buyer</th> 
+    <th>Material Description</th> 
+    <th>Quantity</th> 
+  </tr>
+</table>
+{{#each orders}}
+<form id="form1">
+  <input type="text" name="request-number" value={{id}}>
+  <input type="text" name="assigned-buyer" value={{buyer}}>
+  <input type="text" name="material-description" value={{materialDescription}}>
+  <input type="text" name="quantity" value={{quantity}}>
+  <button class="submit">Update</button>
+</form>
+{{/each}}
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+
+  $(document).ready(function() {
+
+  $(".submit").click(function(event){
+
+    event.preventDefault();
+
+    var update = {
+
+      id : $(this).parent()[0].elements[0].value,
+      buyer: $(this).parent()[0].elements[1].value,
+      material: $(this).parent()[0].elements[2].value,
+      quantity: $(this).parent()[0].elements[3].value,
+
+    };
+
+  console.log(update);
+
+  $.ajax({
+      method: "PUT",
+      url: "/api/update",
+      data: update,
+    })
+
+  });
+
+});
+</script>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+=======
 <div class="container">
   <div class="row data-row-lg">
     <div class="col-md-12">
@@ -64,3 +156,4 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script src="../../public/js/all.js"></script>
+
