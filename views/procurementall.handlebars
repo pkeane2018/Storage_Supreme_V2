@@ -72,12 +72,15 @@
     event.preventDefault();
 
     var update = {
-
       id : $(this).parent()[0].elements[0].value,
-      buyer: $(this).parent()[0].elements[1].value,
-      material: $(this).parent()[0].elements[2].value,
-      quantity: $(this).parent()[0].elements[3].value,
-
+      dateSubmitted: $(this).parent()[0].elements[1].value,
+      buyer: $(this).parent()[0].elements[2].value,
+      needByDate: $(this).parent()[0].elements[3].value,
+      materialDescription: $(this).parent()[0].elements[4].value,
+      quantity: $(this).parent()[0].elements[5].value,
+      status: $(this).parent()[0].elements[6].value,
+      confirmedDeliveryDate: $(this).parent()[0].elements[7].value,
+      deliveryStatus: $(this).parent()[0].elements[8].value,
     };
 
   console.log(update);
