@@ -14,8 +14,6 @@ module.exports = function(app) {
     res.render("index");
   });
 
-
-
   app.get("/new", function(req, res) {
     res.render("newrequest");
   });
@@ -23,10 +21,10 @@ module.exports = function(app) {
   app.get("/procurement", function(req, res) {
     // Info needs to be added here to display the databse
     db.purchase_orders.findAll().then(function(results){
-    res.render("procurementall", {
-      orders: results
+      res.render("procurementall", {
+        orders: results
+      });
     });
-  });
   });
 
   app.get("/review", function(req, res) {
@@ -42,6 +40,4 @@ module.exports = function(app) {
   app.get("*", function(req, res) {
     res.render("404");
   });
-
 };
-  

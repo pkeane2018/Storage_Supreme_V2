@@ -1,14 +1,35 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-4 img-btn btn-1 animated zoomIn">
+    <div id="requestMaterials" class="col-md-4 img-btn btn-1 animated zoomIn">
       <h3>REQUST MATERIAL</h3>
     </div>
-    <div class="col-md-4 img-btn btn-2 animated zoomIn">
+    <div id="reviewStatus" class="col-md-4 img-btn btn-2 animated zoomIn">
       <h3>REVIEW STATUS OF REQUEST</h3>
     </div>
-    <div class="col-md-4 img-btn btn-3 animated zoomIn">
+    <div id="procurementPortal" class="col-md-4 img-btn btn-3 animated zoomIn">
       <h3>PROCUREMENT PORTAL</h3>
     </div>
   </div>
 </div>
 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+<script>
+$("#requestMaterial").click(function(event) {
+  event.preventDefault();
+  window.location.href="/new";
+});
+
+$("#reviewStatus").click(function(event) {
+  alert("work gosh darn it");
+  event.preventDefault();
+  window.location.href="/procurement";
+});
+
+$("#procurementMaterial").click(function(event) {
+  event.preventDefault();
+  window.location.href="/review";
+});
+</script>
