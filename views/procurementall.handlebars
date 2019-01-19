@@ -31,7 +31,6 @@
           <th>Status</th>
           <th>Date Ordered</th>
           <th>Confirmed Delivery Date</th>
-          <th>Delivery Status</th>
         </tr>
       </table>
       {{#each orders}}
@@ -44,7 +43,6 @@
         <input type="text" name="quantity" value={{quantity}}>
         <input type="text" name="status" value={{status}}>
         <input type="text" name="confirmedDeliveryDate" value={{confirmedDeliveryDate}}>
-        <input type="text" name="deliveryStatus" value={{deliveryStatus}}>
         <button class="submit">Update</button>
       </form>
       {{/each}}
