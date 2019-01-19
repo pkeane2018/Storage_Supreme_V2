@@ -1,42 +1,42 @@
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h1>Construction, Inc.</h1>
-        <h2>Purchase Request System</h2>
-        <h2>New Request</h2>
-        <br />
-        <form class="clearfix mb-4">
-          <div class="form-group">
-            <label for="project-name">Project Name</label>
-            <input type="text" id="project-name" class="form-control" aria-describedby="project-name" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="requestor-name">Requestor Name</label>
-            <input type="text" id="requestor-name" class="form-control" aria-describedby="requestor-name" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="requestor-name">Buyer Name</label>
-            <input type="text" id="requestor-name" class="form-control" aria-describedby="requestor-name" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="material">Material Description</label>
-            <input type="text" id="material" class="form-control" aria-describedby="material" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="quantity">Quantity</label>
-            <input type="text" id="quantity" class="form-control" aria-describedby="quantity" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="need-by-date">Need-by Date</label>
-            <input type="text" id="need-by-date" class="form-control" aria-describedby="need-by-date" placeholder="Enter Example Text">
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit to Procurement</button>
-        </form>
-      </div>
+
+<div class="container">
+  <div class="row data-row-new">
+    <div class="col-md-12">
+      <br/>
+      <h2 class="new-request">New Request</h2>
+      <br />
+      <form class="clearfix mb-4">
+        <div class="form-group">
+          <label for="project-name">Project Name</label>
+          <input type="text" id="project-name" class="form-control" aria-describedby="project-name" placeholder="Project Name...">
+        </div>
+        <div class="form-group">
+          <label for="requestor-name">Requestor Name</label>
+          <input type="text" id="requestor-name" class="form-control" aria-describedby="requestor-name" placeholder="Requestor Name...">
+        </div>
+        <div class="form-group">
+          <label for="requestor-name">Buyer Name</label>
+          <input type="text" id="requestor-name" class="form-control" aria-describedby="requestor-name" placeholder="Buyer Name...">
+        </div>
+        <div class="form-group">
+          <label for="material">Material Description</label>
+          <input type="text" id="material" class="form-control" aria-describedby="material" placeholder="Material Description...">
+        </div>
+        <div class="form-group">
+          <label for="quantity">Quantity</label>
+          <input type="text" id="quantity" class="form-control" aria-describedby="quantity" placeholder="Quantity...">
+        </div>
+        <div class="form-group">
+          <label for="need-by-date">Need-by Date</label>
+          <input type="text" id="need-by-date" class="form-control" aria-describedby="need-by-date" placeholder="Need-by Date (00/00/0000)...">
+        </div>
+        <button id="submit" class="btn btn-primary float-right">Submit to Procurement</button>
+      </form>
+
     </div>
   </div>
 </div>
+
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -53,7 +53,8 @@ $(document).ready(function () {
             requestorname : $("#requestor-name").val().trim(),
             materialDesc : $("#material").val().trim(),
             quantity : $("#quantity").val().trim(),
-            needByDate : $("#need-by-date").val().trim()
+            needByDate : $("#need-by-date").val().trim(),
+            buyer: $("#buyer-name").val().trim()
         };
 
         console.log(request);
