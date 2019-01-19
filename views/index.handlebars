@@ -1,12 +1,12 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-4 img-btn btn-1">
+    <div id="requestMaterial" class="col-md-4 img-btn btn-1">
       <h3>REQUST MATERIAL</h3>
     </div>
-    <div class="col-md-4 img-btn btn-2">
+    <div id="reviewStatus" class="col-md-4 img-btn btn-2">
       <h3>REVIEW STATUS OF REQUEST</h3>
     </div>
-    <div class="col-md-4 img-btn btn-3">
+    <div id="procurementMaterial" class="col-md-4 img-btn btn-3">
       <h3>PROCUREMENT PORTAL</h3>
     </div>
   </div>
@@ -16,3 +16,13 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 {{!-- <script src="../public/js/index.js"></script> --}}
 {{!-- <script src="../public/js/all.js"></script> --}}
+
+
+<script>$("#requestMaterial").click(function(event) {
+  alert("hi ya");
+  event.preventDefault();
+
+  window.location.href="http//localhost:3000/new";
+
+});
+</script>
