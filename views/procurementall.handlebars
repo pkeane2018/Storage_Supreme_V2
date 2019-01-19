@@ -1,3 +1,4 @@
+
 <div id="home">
   <div class="container">
     <div class="row">
@@ -87,4 +88,72 @@
   </div>
 </div>
 
+
+=======
+<div class="container">
+  <div class="row data-row-lg">
+    <div class="col-md-12">
+      <br/>
+      <h2>Procurement Portal</h2>
+      <br />
+      <button type="button" class="btn btn-secondary">Home</button>
+      <br />
+      <br />
+  
+    </div>
+  </div>
+  <div class="row data-row">
+    <div class="col-md-12">
+            <style>
+        th {
+
+            width: 176px;
+          }
+        </style>
+      <br />
+      <h3>All Requests:</h3>
+      <table>
+        <tr>
+          <th>Request Number</th>
+          <th>Date Submitted</th>
+          <th>Assigned Buyer</th>
+          <th>Need-by Date</th>
+          <th>Material Description</th>
+          <th>Quantity</th>
+          <th>Status</th>
+          <th>Date Ordered</th>
+          <th>Confirmed Delivery Date</th>
+          <th>Delivery Status</th>
+        </tr>
+      </table>
+      {{#each PurchaseOrders}}
+      <form id="form1">
+        <input type="text" name="request-number" value={{id}}>
+        <input type="text" name="dateSubmitted" value={{dateSubmitted}}>
+        <input type="text" name="assigned-buyer" value={{buyer}}>
+        <input type="text" name="needByDate" value={{needByDate}}>
+        <input type="text" name="materialDescription" value={{materialDescription}}>
+        <input type="text" name="quantity" value={{quantity}}>
+        <input type="text" name="status" value={{status}}>
+        <input type="text" name="confirmedDeliveryDate" value={{confirmedDeliveryDate}}>
+        <input type="text" name="deliveryStatus" value={{deliveryStatus}}>
+        <button class="submit">Update</button>
+      </form>
+      {{/each}}
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="../../public/js/all.js"></script>
 

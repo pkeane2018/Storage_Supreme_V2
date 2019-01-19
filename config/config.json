@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": "tito6543",
+    "password": "sqlpassword",
     "database": "angelsdb",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": null,
+    "password": "sqlpassword",
     "database": "testdb",
     "host": "localhost",
     "dialect": "mysql",
