@@ -2,6 +2,7 @@
   "development": {
     "username": "root",
 
+
     "password": "sqlpassword",
 
     "database": "angelsdb",
