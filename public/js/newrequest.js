@@ -9,8 +9,8 @@ $(document).ready(function () {
         var request = {
 
             projectName : $("#project-name").val().trim(),
-            requestorName : $("#requestor-name").val().trim(),
-            materialDesc : $("#material").val().trim(),
+            requestorname : $("#requestor-name").val().trim(),
+            materialDescription : $("#material").val().trim(),
             quantity : $("#quantity").val().trim(),
             needByDate : $("#need-by-date").val().trim()
         };
@@ -18,6 +18,8 @@ $(document).ready(function () {
         console.log(request);
 
         $.post("api/requests", request);
+
+        $(".form-control").val("");
     }
 
 });
