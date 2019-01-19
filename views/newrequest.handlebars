@@ -60,9 +60,13 @@ $(document).ready(function () {
 
         console.log(request);
 
-        $.post("api/requests", request);
-
-        $(".form-control").val("");
+        $.ajax({
+          method: "PUT",
+          url: "/api/update",
+          data: request
+        }).then(function(data){
+          window.location.href="/";
+        });
     });
 
 })

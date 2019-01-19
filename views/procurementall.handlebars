@@ -4,7 +4,7 @@
       <br/>
       <h2>Procurement Portal</h2>
       <br />
-      <button type="button" class="btn btn-secondary">Home</button>
+      <button id="homeButton" type="button" class="btn btn-secondary">Home</button>
       <br />
       <br />
     </div>
@@ -71,12 +71,19 @@
 
 <script>
 
-  $(document).ready(function() {
-
-  $(".submit").click(function(event){
-
+   $("#homeButton").click(function(event) {
+   
     event.preventDefault();
 
+    window.location.href="/";
+  });
+
+  $(document).ready(function() {
+
+  $("#submit").click(function(event){
+
+    event.preventDefault();
+        
     var update = {
       id : $(this).parent()[0].elements[0].value,
       status: $(this).parent()[0].elements[6].value,
@@ -84,7 +91,16 @@
       confirmedDeliveryDate: $(this).parent()[0].elements[8].value,
     };
 
+      $.ajax({
+        method: "PUT",
+        url: "/api/update",
+        data: update
+      }).then(function(data){
+        window.location.href="/";
+      });
+
   console.log(update);
+
 
    $.ajax({
     method: "PUT",
@@ -92,8 +108,10 @@
     data: update
 
   });
- 
+
   });
+
+ 
 
 });
 
