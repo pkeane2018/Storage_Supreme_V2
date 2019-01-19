@@ -14,8 +14,6 @@ module.exports = function(app) {
     res.render("index");
   });
 
-
-
   app.get("/new", function(req, res) {
     res.render("newrequest");
   });
@@ -42,6 +40,4 @@ module.exports = function(app) {
   app.get("*", function(req, res) {
     res.render("404");
   });
-
 };
-  

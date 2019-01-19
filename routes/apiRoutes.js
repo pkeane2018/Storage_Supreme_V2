@@ -15,6 +15,7 @@ module.exports = function(app) {
       requestorname : req.body.requestorname,
       materialDescription: req.body.materialDesc,
       quantity: req.body.quantity,
+      needByDate: req.body.needByDate,
       buyer: req.body.buyer,
       // buyer: req.body.buyer
     }).then(function(dbExample) {
@@ -25,14 +26,9 @@ module.exports = function(app) {
   app.put("/api/update", function(req, res) {
     db.purchase_orders.update(
       {
-      dateSubmitted: req.body.dateSubmitted, 
-      buyer: req.body.buyer,
-      needByDate: req.body.needByDate,
-      materialDescription: req.body.material,
-      quantity: req.body.quantity,
       status: req.body.status,
+      dateOrdered: req.body.dateOrdered,
       confirmedDeliveryDate: req.body.confirmedDeliveryDate,
-      deliveryStatus: req.body.deliveryStatus
     }, 
       {
       where: {
