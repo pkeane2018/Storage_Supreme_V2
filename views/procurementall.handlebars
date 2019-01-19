@@ -7,32 +7,44 @@
       <button type="button" class="btn btn-secondary">Home</button>
       <br />
       <br />
-  
     </div>
   </div>
+
   <div class="row data-row">
     <div class="col-md-12">
-            <style>
-        th {
-
-            width: 176px;
-          }
-        </style>
       <br />
-      <h3>All Requests:</h3>
-      <table>
-        <tr>
-          <th>Request Number</th>
-          <th>Date Submitted</th>
-          <th>Assigned Buyer</th>
-          <th>Need-by Date</th>
-          <th>Material Description</th>
-          <th>Quantity</th>
-          <th>Status</th>
-          <th>Date Ordered</th>
-          <th>Confirmed Delivery Date</th>
-        </tr>
-      </table>
+<h3>All Requests:</h3>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-1 col-title">
+            Request Number
+          </div>
+          <div class="col-md-1 col-title">
+            Date Submitted
+          </div>
+          <div class="col-md-1 col-title">
+            Buyer
+          </div>
+          <div class="col-md-1 col-title">
+            Need-by Date
+          </div>
+          <div class="col-md-1 col-title">
+            Material Description
+          </div>
+          <div class="col-md-1 col-title">
+            Quantity
+          </div>
+          <div class="col-md-1 col-title">
+            Status
+          </div>
+          <div class="col-md-1 col-title">
+            Date Ordered
+          </div>
+          <div class="col-md-1 col-title">
+            Confirmed Delivery Date
+          </div>
+        </div>
+      </div>
       {{#each orders}}
       <form id="form1">
         <input type="text" name="request-number" value={{id}}>
@@ -42,6 +54,7 @@
         <input type="text" name="materialDescription" value={{materialDescription}}>
         <input type="text" name="quantity" value={{quantity}}>
         <input type="text" name="status" value={{status}}>
+        <input type="text" name="dateOrdered" value={{dateOrdered}}>
         <input type="text" name="confirmedDeliveryDate" value={{confirmedDeliveryDate}}>
         <button class="submit">Update</button>
       </form>
