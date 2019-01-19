@@ -15,6 +15,7 @@ module.exports = function(app) {
       requestorname : req.body.requestorname,
       materialDescription: req.body.materialDesc,
       quantity: req.body.quantity,
+      needByDate: req.body.needByDate,
       buyer: req.body.buyer,
       // buyer: req.body.buyer
     }).then(function(dbExample) {
