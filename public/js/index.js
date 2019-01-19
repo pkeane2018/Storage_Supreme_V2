@@ -1,21 +1,17 @@
-$(document).ready(function () {
+$(document).ready(function() {
+  $(document).on("#submit", newRequest);
 
-    $(document).on("#submit", newRequest);
+  function newRequest() {
+    event.preventDefault();
 
-    function newRequest() {
+    var request = {
+      projectName: $("#project-name").val().trim(),
+      requestorName: $("#requestor-name").val().trim(),
+      materialDesc: $("#material").val().trim(),
+      quantity: $("#quantity").val().trim(),
+      needByDate: $("#need-by-date").val().trim()
+    };
 
-        event.preventDefault();
-
-        var request = {
-
-            projectName: $("#project-name").val().trim(),
-            requestorName: $("#requestor-name").val().trim(),
-            materialDesc: $("#material").val().trim(),
-            quantity: $("#quantity").val().trim(),
-            needByDate: $("#need-by-date").val().trim()
-        };
-
-        $.post("api/requests", request);
-    }
-
+    $.post("api/requests", request);
+  }
 });
