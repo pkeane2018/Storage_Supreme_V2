@@ -6,7 +6,8 @@ body {
   background-color: rgb(0, 0, 85);
 }
 
-h1, h6 {
+h1,
+h6 {
   text-align: center;
   color: white;
   padding-right: 1000px;
@@ -18,6 +19,10 @@ h2 {
 
 h3 {
   font-weight: 900;
+}
+
+.logo {
+  text-align: center !important;
 }
 
 .fas {
@@ -33,10 +38,11 @@ h3 {
 }
 
 .img-btn:hover {
-  transform: scale(1.1); 
+  transform: scale(1.1);
 }
+
 .btn-1 {
-  background-image: url("https://www.wohlsenconstruction.com/wp-content/uploads/2016/03/green-buildings-construction-rockhill-mennonite-community-personal-care-addition-1-1395x704.jpg")
+  background-image: url("https://www.wohlsenconstruction.com/wp-content/uploads/2016/03/green-buildings-construction-rockhill-mennonite-community-personal-care-addition-1-1395x704.jpg");
 }
 
 .btn-2 {
@@ -49,10 +55,21 @@ h3 {
 
 .data-row {
   background-color: white;
-  border-width:15px;  
+  border-width: 15px;
   border-style: solid;
   border-top: solid;
   border-color: rgb(4, 114, 116);
+}
+
+  .data-row-new {
+  background-color: white;
+  border-width: 15px;
+  border-style: solid;
+  border-color: rgb(4, 114, 116);
+}
+
+.new-request {
+  color: black !important;  
 }
 
 .data-row-lg {
@@ -60,10 +77,18 @@ h3 {
   background-image: url("http://www.earthtimes.org/newsimage/organic-building-materials-25-May-11.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  border-width:15px;  
+  border-width: 15px;
   border-style: solid;
   border-bottom: none;
   /* border-color: rgb(107, 107, 107); */
   border-color: rgb(4, 114, 116);
+}
 
+.col-title {
+  font-weight: bold;
+  text-align: center;
+}
+
+input {
+width: 87px;
 }
