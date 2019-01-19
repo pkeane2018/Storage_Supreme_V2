@@ -30,21 +30,20 @@
             <th>Delivery Status</th>
           </tr>
         </table>
-        {{#each orders}}
-        <form id="form1">
-          <input type="text" name="request-number" value={{id}}>
-          <input type="text" name="dateSubmitted" value={{dateSubmitted}}>
-          <input type="text" name="assigned-buyer" value={{buyer}}>
-          <input type="text" name="needByDate" value={{needByDate}}>
-          <input type="text" name="materialDescription" value={{materialDescription}}>
-          <input type="text" name="quantity" value={{quantity}}>
-          <input type="text" name="status" value={{status}}>
-          <input type="text" name="confirmedDeliveryDate" value={{confirmedDeliveryDate}}>
-          <input type="text" name="deliveryStatus" value={{deliveryStatus}}>
-          <button class="submit">Update</button>
-        </form>
+        {{#each PurchaseOrders}}
+          <form id="form1">
+            <input type="text" name="request-number" value={{id}}>
+            <input type="text" name="dateSubmitted" value={{dateSubmitted}}>
+            <input type="text" name="assigned-buyer" value={{buyer}}>
+            <input type="text" name="needByDate" value={{needByDate}}>
+            <input type="text" name="materialDescription" value={{materialDescription}}>
+            <input type="text" name="quantity" value={{quantity}}>
+            <input type="text" name="status" value={{status}}>
+            <input type="text" name="confirmedDeliveryDate" value={{confirmedDeliveryDate}}>
+            <input type="text" name="deliveryStatus" value={{deliveryStatus}}>
+            <button class="submit">Update</button>
+          </form>
         {{/each}}
-
       </div>
     </div>
   </div>
