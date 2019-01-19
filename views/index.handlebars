@@ -18,11 +18,20 @@
 {{!-- <script src="../public/js/all.js"></script> --}}
 
 
-<script>$("#requestMaterial").click(function(event) {
-  alert("hi ya");
+<script>
+$("#requestMaterial").click(function(event) {
   event.preventDefault();
+  window.location.href="/new";
+});
 
-  window.location.href="http//localhost:3000/new";
+$("#reviewStatus").click(function(event) {
+  alert("work gosh darn it");
+  event.preventDefault();
+  window.location.href="/procurement";
+});
 
+$("#procurementMaterial").click(function(event) {
+  event.preventDefault();
+  window.location.href="/review";
 });
 </script>

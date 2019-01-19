@@ -20,11 +20,11 @@ module.exports = function(app) {
 
   app.get("/procurement", function(req, res) {
     // Info needs to be added here to display the databse
-    db.purchase_orders.findAll().then(function(results){
-    res.render("procurementall", {
-      orders: results
+    db.purchase_orders.findAll().then(function(results) {
+      res.render("procurementall", {
+        orders: results
+      });
     });
-  });
   });
 
   app.get("/review", function(req, res) {
