@@ -8,11 +8,13 @@ module.exports = function(sequelize, DataTypes) {
     dateSubmitted: DataTypes.DATEONLY,
     dateOrdered: DataTypes.DATEONLY,
     confirmedDeliveryDate: DataTypes.DATEONLY,
-    requestNumber: DataTypes.INTEGER,
+    // requestNumber: DataTypes.INTEGER,
     buyer: DataTypes.STRING,
     status: DataTypes.STRING,
     deliveryStatus: DataTypes.STRING,
-    deliveryDateDelta: DataTypes.INTEGER
+    deliveryDateDelta: DataTypes.INTEGER,
+    createdAt: DataTypes.BOOLEAN,
+    updatedAt: DataTypes.BOOLEAN
   });
   return PurchaseOrders;
 };
