@@ -93,6 +93,7 @@
       status: $(this).parent()[0].elements[6].value,
       dateOrdered: $(this).parent()[0].elements[7].value,
       confirmedDeliveryDate: $(this).parent()[0].elements[8].value,
+      deliveryStatus: $(this).parent()[0].elements[9].value,
     };
 
     console.log(update);
@@ -101,8 +102,8 @@
         method: "PUT",
         url: "/api/update",
         data: update
-      }).then(function(data){
-        window.location.href="/";
+      {{!-- }).then(function(data){
+        window.location.href="/"; --}}
       });
 
   });
