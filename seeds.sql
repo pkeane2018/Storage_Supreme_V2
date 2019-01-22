@@ -52,4 +52,3 @@ INSERT INTO purchase_orders (projectName, requestorname, materialDescription, qu
 VALUES ("Z Apartments", "Melissa", "Escalator", "2", "2019/01/30", "2019/01/18", "Mike", "New");
 INSERT INTO purchase_orders (projectName, requestorname, materialDescription, quantity, needByDate, dateSubmitted, buyer, status) 
 VALUES ("Park West", "Hannah", "Elevator", "4", "2019/06/08", "2019/01/21", "Lou", "New");
-

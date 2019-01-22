@@ -7,5 +7,5 @@ CREATE DATABASE testdb;
 CREATE DATABASE angelsdb;
 
 USE angelsdb;
-SELECT * FROM purchase_orders;
-
+SELECT * FROM purchase_orders
+ORDER BY projectName;
