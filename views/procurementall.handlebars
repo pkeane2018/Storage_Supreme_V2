@@ -84,7 +84,7 @@
 
   $(document).ready(function() {
 
-  $("#submit").click(function(event){
+  $(".submit").click(function(event){
 
     event.preventDefault();
         
@@ -95,6 +95,8 @@
       confirmedDeliveryDate: $(this).parent()[0].elements[8].value,
     };
 
+    console.log(update);
+
       $.ajax({
         method: "PUT",
         url: "/api/update",
@@ -102,16 +104,6 @@
       }).then(function(data){
         window.location.href="/";
       });
-
-  console.log(update);
-
-
-   $.ajax({
-    method: "PUT",
-    url: "/api/update",
-    data: update
-
-  });
 
   });
 

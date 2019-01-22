@@ -65,8 +65,8 @@ $(document).ready(function () {
         console.log(request);
 
         $.ajax({
-          method: "PUT",
-          url: "/api/update",
+          method: "POST",
+          url: "/api/requests",
           data: request
         }).then(function(data){
           window.location.href="/";
