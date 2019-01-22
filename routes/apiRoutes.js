@@ -29,6 +29,7 @@ module.exports = function(app) {
       status: req.body.status,
       dateOrdered: req.body.dateOrdered,
       confirmedDeliveryDate: req.body.confirmedDeliveryDate,
+      deliveryStatus: req.body.deliveryStatus
     }, 
       {
       where: {
