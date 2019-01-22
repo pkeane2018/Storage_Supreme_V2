@@ -1,4 +1,5 @@
 var db = require("../models");
+var moment = require("moment");
 
 module.exports = function(app) {
   // Get all examples
@@ -17,6 +18,7 @@ module.exports = function(app) {
       quantity: req.body.quantity,
       needByDate: req.body.needByDate,
       buyer: req.body.buyer,
+      dateSubmitted: moment().format("YYYY/MM/DD")
       // buyer: req.body.buyer
     }).then(function(dbExample) {
       res.json(dbExample);

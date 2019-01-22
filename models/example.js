@@ -16,12 +16,12 @@ module.exports = function(sequelize, DataTypes) {
     deliveryStatus: DataTypes.STRING,
     deliveryDateDelta: DataTypes.INTEGER,
     createdAt: {
-      type: Sequelize.DATE,
-      defaultValue: Sequelize.NOW
+      type: DataTypes.DATE,
+      defaultValue: DataTypes.NOW
     },
     updatedAt: {
-      type: Sequelize.DATE,
-      defaultValue: Sequelize.NOW
+      type: DataTypes.DATE,
+      defaultValue: DataTypes.NOW
     }
   });
   return PurchaseOrders;
