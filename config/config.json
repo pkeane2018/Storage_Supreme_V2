@@ -1,21 +1,21 @@
 {
   "development": {
     "username": "root",
-    "password": "tito6543",
+    "password": "",
     "database": "angelsdb",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "sqlpassword",
+    "password": "",
     "database": "testdb",
     "host": "localhost",
     "dialect": "mysql",
     "logging": false
   },
   "production": {
-    "use_env_variable": "true",
+    "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql"
   }
 }
