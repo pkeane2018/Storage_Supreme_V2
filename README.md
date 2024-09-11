@@ -13,4 +13,4 @@ This application is created for organizations with traditional ERP system that a
 * JawsDB
 
 ## Heroku
-[Link to Heroku](https://shrouded-ravine-80240.herokuapp.com/)
+[Link to Heroku](https://storage-supreme-bc16475717b7.herokuapp.com/)
