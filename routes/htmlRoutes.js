@@ -28,12 +28,14 @@ module.exports = function(app) {
   });
 
   app.get("/review", function(req, res) {
-    db.purchase_orders.findAll({order: [["projectName", "ASC"]]}).then(function(results) {
-      console.log(res);
-      res.render("review", {
-        orders: results
+    db.purchase_orders
+      .findAll({ order: [["projectName", "ASC"]] })
+      .then(function(results) {
+        console.log(res);
+        res.render("review", {
+          orders: results
+        });
       });
-    });
   });
 
   app.get("/mgmt", function(req, res) {
