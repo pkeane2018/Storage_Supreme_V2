@@ -57,8 +57,8 @@
         <input type="text" name="materialDescription" value={{materialDescription}} disabled>
         <input type="text" name="quantity" value={{quantity}} disabled>
         <input type="text" name="status" value={{status}}>
-        <input type="text" name="dateOrdered" value={{dateOrdered}}>
-        <input type="text" name="confirmedDeliveryDate" value={{confirmedDeliveryDate}}>
+        <input type="text" name="dateOrdered" required="true" value={{dateOrdered}}>
+        <input type="text" name="confirmedDeliveryDate" required="true" value={{confirmedDeliveryDate}}>
         <input type="text" name="deliveryStatus" value={{deliveryStatus}}>
         <button class="submit">Update</button>
       </form>
@@ -85,8 +85,6 @@
   $(document).ready(function() {
 
   $(".submit").click(function(event){
-
-    event.preventDefault();
         
     var update = {
       id : $(this).parent()[0].elements[0].value,
