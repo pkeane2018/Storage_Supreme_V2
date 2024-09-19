@@ -13,110 +13,84 @@
   <div class="row data-row">
     <div class="col-md-12">
       <br />
-      <h3>All Requests:</h3>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-1 col-title">
-            Request Number
-          </div>
-          <div class="col-md-1 col-title">
-            Date Submitted
-          </div>
-          <div class="col-md-1 col-title">
-            Project Name
-          </div>
-          <div class="col-md-1 col-title">
-            Requestor
-          </div>
-          <div class="col-md-1 col-title">
-            Buyer
-          </div>
-          <div class="col-md-1 col-title">
-            Need-by Date
-          </div>
-          <div class="col-md-1 col-title">
-            Material Description
-          </div>
-          <div class="col-md-1 col-title">
-            Quantity
-          </div>
-          <div class="col-md-1 col-title">
-            Status
-          </div>
-          <div class="col-md-1 col-title">
-            Date Ordered
-          </div>
-          <div class="col-md-1 col-title">
-            Confirmed Delivery Date
-          </div>
-          <div class="col-md-1 col-title">
-            Delivery Status
-          </div>
-        </div>
-      </div>
-
-      <div class="container">
-        {{#each orders}}
-        <form id="form1">
-          <div class="form-group row">
-            <div class="col-md-1">
-              <input type="text" name="request-number" value={{id}}>
-            </div>
-            <div class="col-md-1">
-              <input type="text" name="dateSubmitted" value={{dateSubmitted}}>
-            </div>
-            <div class="col-md-1">
-              <input type="text" name="projectName" value={{projectName}}>
-            </div>
-            <div class="col-md-1">
-              <input type="text" name="requestorname" value={{requestorname}}>
-            </div>
-            <div class="col-md-1">
-              <input type="text" name="assigned-buyer" value={{buyer}}>
-            </div>
-            <div class="col-md-1">
-              <input type="text" name="needByDate" value={{needByDate}}>
-            </div>
-            <div class="col-md-1">
-              <input type="text" name="materialDescription" value={{materialDescription}}>
-            </div>
-            <div class="col-md-1">
-              <input type="text" name="quantity" value={{quantity}}>
-            </div>
-            <div class="col-md-1">
-              <input type="text" name="status" value={{status}}>
-            </div>
-            <div class="col-md-1">
-              <input type="text" name="dateOrdered" value={{dateOrdered}}>
-            </div>
-            <div class="col-md-1">
-              <input type="text" name="confirmedDeliveryDate" value={{confirmedDeliveryDate}}>
-            </div>
-            <div class="col-md-1">
-              <input type="text" name="deliveryStatus" value={{deliveryStatus}}>
-            </div>
-          </div>
-        </form>
-        {{/each}}
-      </div>
-      <br />
-      <br />
-      <br />
-      <br />
+      <h3>All Requests</h3>
+      <table class="table table-responsive">
+        <thead>
+          <tr>
+            <th class="col-md-1 col-title">
+              Request Number
+            </th>
+            <th class="col-md-1 col-title">
+              Date Submitted
+            </th>
+            <th class="col-md-1 col-title">
+              Project Name
+            </th>
+            <th class="col-md-1 col-title">
+              Requestor
+            </th>
+            <th class="col-md-1 col-title">
+              Buyer
+            </th>
+            <th class="col-md-1 col-title">
+              Need-by Date
+            </th>
+            <th class="col-md-1 col-title">
+              Material Description
+            </th>
+            <th class="col-md-1 col-title">
+              Quantity
+            </th>
+            <th class="col-md-1 col-title">
+              Status
+            </th>
+            <th class="col-md-1 col-title">
+              Date Ordered
+            </th>
+            <th class="col-md-1 col-title">
+              Confirmed Delivery Date
+            </th>
+            <th class="col-md-1 col-title">
+              Delivery Status
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each orders}}
+          <tr>
+            <td class="col-md-1" name="request-number">{{id}}</td>
+            <td class="col-md-1" name="dateSubmitted">{{dateSubmitted}}</td>
+            <td class="col-md-1" name="projectName">{{projectName}}</td>
+            <td class="col-md-1" name="requestorname">{{requestorname}}</td>
+            <td class="col-md-1" name="buyer">{{buyer}}</td>
+            <td class="col-md-1" name="needByDate">{{needByDate}}</td>
+            <td class="col-md-1" name="materialDescription">{{materialDescription}}</td>
+            <td class="col-md-1" name="quantity">{{quantity}}</td>
+            <td class="col-md-1" name="status">{{status}}</td>
+            <td class="col-md-1" name="dateOrdered">{{dateOrdered}}</td>
+            <td class="col-md-1" name="confirmedDeliveryDate">{{confirmedDeliveryDate}}</td>
+            <td class="col-md-1" name="deliveryStatus">{{deliveryStatus}}</td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
     </div>
   </div>
+<br />
+<br />
+<br />
+<br />
 </div>
-
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script src="../../public/js/all.js"></script>
 
 <script>
-  $("#homeButtonReview").click(function(event) {
-   
+  $("#homeButtonReview").click(function (event) {
+
     event.preventDefault();
 
-    window.location.href="/";
+    window.location.href = "/";
   });
 </script>
