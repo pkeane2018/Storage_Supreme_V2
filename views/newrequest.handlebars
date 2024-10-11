@@ -5,6 +5,9 @@
       <br/>
       <h2 class="new-request">New Request</h2>
       <br />
+      <button id="homeButton" type="button" class="btn btn-secondary">Home</button>
+      <br />
+      <br />
       <form class="clearfix mb-4">
         <div class="form-group">
           <label for="project-name">Project Name</label>
@@ -44,33 +47,38 @@
 
 <script>
 
-$(document).ready(function () {
+  $("#homeButton").click(function(event) {
+      
+    event.preventDefault();
 
-     $("#submit").click(function(event){
+    window.location.href="/";
+  });
 
-      event.preventDefault();
+  $(document).ready(function () {
 
-        var request = {
-            projectName : $("#project-name").val().trim(),
-            requestorname : $("#requestor-name").val().trim(),
-            materialDesc : $("#material").val().trim(),
-            quantity : $("#quantity").val().trim(),
-            needByDate : $("#need-by-date").val().trim(),
-            buyer: $("#buyer-name").val().trim(),
-        };
+      $("#submit").click(function(event){
 
-        console.log(request);
+        event.preventDefault();
 
-        $.ajax({
-          method: "POST",
-          url: "/api/requests",
-          data: request
-        }).then(function(data){
-          window.location.href="/";
-        });
-    });
+          var request = {
+              projectName : $("#project-name").val().trim(),
+              requestorname : $("#requestor-name").val().trim(),
+              materialDesc : $("#material").val().trim(),
+              quantity : $("#quantity").val().trim(),
+              needByDate : $("#need-by-date").val().trim(),
+              buyer: $("#buyer-name").val().trim(),
+          };
 
-})
+          $.ajax({
+            method: "POST",
+            url: "/api/requests",
+            data: request
+          }).then(function(data){
+            window.location.href="/";
+          });
+      });
+
+  })
 
 </script>
 
