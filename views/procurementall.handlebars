@@ -95,20 +95,17 @@
       deliveryStatus: $(this).parent()[0].elements[9].value,
     };
 
-    console.log(update);
-
       $.ajax({
         method: "PUT",
         url: "/api/update",
         data: update
+      }).then(function(){
+        alert("Update successful");
       }).then(function(data){
-        window.location.href="/";
+        window.location.reload();
       });
 
   });
-
- 
-
 });
 
 </script>
