@@ -31,7 +31,6 @@ module.exports = function(app) {
     db.purchase_orders
       .findAll({ order: [["projectName", "ASC"]] })
       .then(function(results) {
-        console.log(res);
         res.render("review", {
           orders: results
         });
