@@ -73,6 +73,8 @@
             method: "POST",
             url: "/api/requests",
             data: request
+          }).then(function(){
+            alert("Request submitted");
           }).then(function(data){
             window.location.href="/";
           });
